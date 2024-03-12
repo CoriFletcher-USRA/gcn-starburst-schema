@@ -1,33 +1,42 @@
 {
   "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/starburst/BurstAlert.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Starburst Alert Notice",
-  "description": "Information about a Starburst trigger.  All fields optional; omitted if not available or not applicable.",
+  "title": "Starburst Burst Alert Notice",
+  "description": "Information about a Starburst trigger.",
   "type": "object",
   "allOf": [
     {
       "$ref": "../core/Reporter.schema.json",
-      "description": "mission=STARBURST"
-    },
-    {
-      "$ref": "../core/AdditionalInfo.schema.json",
-      "description": "Complementary info in text form."
+      "description": "mission=StarBurst"
     },
     {
       "$ref": "../core/Alert.schema.json"
+      "description": "alert_datetime = YYYY-MM-DDTHH:MM:SS.xxx"
+    },
+    {
+      "$ref": "../core/Alert.schema.json"
+      "description": "alert_type = burst alert"
+    },
+    {
+      "$ref": "../core/Reporter.schema.json",
+      "description":  "record_number= int"
     },
     {
       "$ref": "../core/Event.schema.json",
-      "description": "event_id=[ 'BUGyymmdd.fff', seqnum ], where fff is in milidays with trailing zeros. id_source=GLOWBUG for both."
+      "description": "id= 'SByymmdd' "
     },
     {
       "$ref": "../core/DateTime.schema.json",
-      "description": "Trigger_time with seconds fraction."
+      "description": "trigger_time": "YYYY-MM-DDTHH:MM:SS.xxx",
     },
     {
-      "$ref": "../core/Statistics.schema.json",
-      "description": "rate_duration is the integration time (a.k.a. trigger time scale), over which the rate_snr was measured."
-    }
+      "$ref": "../core/Event.schema.json",
+      "description": "trigger_signif": " int [sigma]",
+    },
+    {
+      "$ref": "../core/DateTime.schema.json",
+      "description": "trigger_dur": " int [ms]",
+    },
   ],
   "properties": {
     "detector_status": {
@@ -67,15 +76,6 @@
           "$ref": "../core/DetectorStatus.schema.json"
         },
         "CsI11": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CLLB0": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CLLB1": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "SSA": {
           "$ref": "../core/DetectorStatus.schema.json"
         }
       }

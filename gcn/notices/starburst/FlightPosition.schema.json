@@ -1,33 +1,59 @@
 {
-  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/starburst/FlightPosition.schema.json",
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/starburst/GroundPosition.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Starburst Alert Notice",
+  "title": "Starburst Flight Position Notice",
   "description": "Information about a Starburst trigger.  All fields optional; omitted if not available or not applicable.",
   "type": "object",
   "allOf": [
     {
       "$ref": "../core/Reporter.schema.json",
-      "description": "mission=STARBURST"
+      "description": "mission=StarBurst"
     },
+
     {
-      "$ref": "../core/AdditionalInfo.schema.json",
-      "description": "Complementary info in text form."
+      "$ref": "../core/Alert.schema.json"
+      "description": "alert_datetime = YYYY-MM-DDTHH:MM:SS.xxx"
     },
     {
       "$ref": "../core/Alert.schema.json"
+      "description": "alert_type = burst alert"
+    },
+    {
+      "$ref": "../core/Reporter.schema.json",
+      "description":  "record_number= int"
     },
     {
       "$ref": "../core/Event.schema.json",
-      "description": "event_id=[ 'BUGyymmdd.fff', seqnum ], where fff is in milidays with trailing zeros. id_source=GLOWBUG for both."
-    },
-    {
-      "$ref": "../core/DateTime.schema.json",
-      "description": "Trigger_time with seconds fraction."
+      "description": "id= 'SByymmdd' "
     },
     {
       "$ref": "../core/Statistics.schema.json",
-      "description": "rate_duration is the integration time (a.k.a. trigger time scale), over which the rate_snr was measured."
-    }
+      "description": "classifcation = GRB, int , not_astrophysical, int  "
+    },
+    {
+      "$ref": "../core/Localization.schema.json",
+      "description": "ra = int "
+    },
+    {
+      "$ref": "../core/Localization.schema.json",
+      "description": "dec = int "
+    },
+    {
+      "$ref": "../core/Localization.schema.json",
+      "description": "uncertainty = int "
+    },
+    {
+      "$ref": "../core/DateTime.schema.json",
+      "description": "trigger_time": "YYYY-MM-DDTHH:MM:SS.xxx",
+    },
+    {
+      "$ref": "../core/Event.schema.json",
+      "description": "trigger_signif": " int [sigma]",
+    },
+    {
+      "$ref": "../core/DateTime.schema.json",
+      "description": "trigger_interval": " int [ms]",
+    },
   ],
   "properties": {
     "detector_status": {
@@ -80,5 +106,9 @@
         }
       }
     }
+  },
+  {
+    "$ref": "../core/Localization.schema.json",
+    "description": "healpix_url" : "path to url",
   }
 }

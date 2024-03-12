@@ -1,18 +1,20 @@
 {
-    "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/starburst/FlightLocalization.schema.json",
+    "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/starburst/FlightPosition.schema.json",
     "mission": "Starburst",
-    "alert_datetime": "2024-02-27T17:13:27.226476",
-    "alert_type": "Starburst Flight Localization",
-    "classif": "GRB",
-    "classif_signif": "86%",
+    "alert_datetime": "2024-03-05T22:36:05.423159",
+    "alert_type": "update",
+    "record_number": 2,
     "id": "SB210812",
-    "ra": "185.16666666666666 [deg] (J2000)",
-    "dec": "9.05 [deg] (J2000)",
-    "uncertainty": "23.316666666666666 [arcmin radius, statistical]",
-    "trigger_signif": "57 [sigma]",
-    "trigger_interval": "4096 [ms]",
-    "grb_date": "2021-08-12",
-    "trigger_time": "2021-08-12T00:16:28.734 UT",
+    "classification": {
+        "GRB": 0.86,
+        "non-astrophysical": 0.14
+    },
+    "ra": 185.16666666666666,
+    "dec": 9.05,
+    "uncertainty": 23.316666666666666,
+    "trigger_signif": 57,
+    "trigger_interval": 4.096,
+    "trigger_time": "2021-08-12T00:16:28.734",
     "e_range": "44.032 - 279.965 [keV]",
     "detector_status": {
         "CsI0": "on",
@@ -28,7 +30,7 @@
         "CsI10": "on",
         "CsI11": "on"
     },
-    "loc_algorthm": "3 (version number of)",
+    "loc_algorthm": 3,
     "lc_url": "http://heasarc.gsfc.nasa.gov/FTP/starburst/data/gbm/triggers/2021/SB210812/quicklook/SB210812_lc.gif",
     "comments": "The LC_URL file will not be created until ~15 min after the trigger. "
 }
