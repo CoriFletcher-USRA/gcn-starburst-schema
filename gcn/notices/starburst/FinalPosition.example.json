@@ -1,6 +1,6 @@
 {
     "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/starburst/FinalPosition.schema.json",
-    "mission": "Starburst",
+    "mission": "StarBurst",
     "alert_datetime": "2024-03-05T22:36:05.441507",
     "alert_type": "update",
     "record_number": 2,
