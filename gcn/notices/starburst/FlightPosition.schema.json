@@ -9,14 +9,13 @@
       "$ref": "../core/Reporter.schema.json",
       "description": "mission=StarBurst"
     },
-
     {
       "$ref": "../core/Alert.schema.json"
       "description": "alert_datetime = YYYY-MM-DDTHH:MM:SS.xxx"
     },
     {
       "$ref": "../core/Alert.schema.json"
-      "description": "alert_type = burst alert"
+      "description": "alert_type = update"
     },
     {
       "$ref": "../core/Reporter.schema.json",
@@ -43,16 +42,16 @@
       "description": "uncertainty = int "
     },
     {
-      "$ref": "../core/DateTime.schema.json",
-      "description": "trigger_time": "YYYY-MM-DDTHH:MM:SS.xxx",
-    },
-    {
       "$ref": "../core/Event.schema.json",
       "description": "trigger_signif": " int [sigma]",
     },
     {
       "$ref": "../core/DateTime.schema.json",
       "description": "trigger_interval": " int [ms]",
+    },
+    {
+      "$ref": "../core/DateTime.schema.json",
+      "description": "trigger_time": "YYYY-MM-DDTHH:MM:SS.xxx",
     },
   ],
   "properties": {
@@ -94,21 +93,18 @@
         },
         "CsI11": {
           "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CLLB0": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CLLB1": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "SSA": {
-          "$ref": "../core/DetectorStatus.schema.json"
         }
       }
     }
   },
-  {
-    "$ref": "../core/Localization.schema.json",
-    "description": "healpix_url" : "path to url",
-  }
+  [{
+      "$ref": "../core/AdditionalInfo.schema.json",
+      "description": "loc_algorthm = int",
+      },{
+      "$ref": "../core/AdditionalInfo.schema.json",
+      "description": "lc_url = path to url",
+
+    "$ref": "../core/AdditionalInfo.schema.json",
+    "description":  "comments = The LC_URL file will not be created until ~15 min after the trigger. ",
+  },]
 }

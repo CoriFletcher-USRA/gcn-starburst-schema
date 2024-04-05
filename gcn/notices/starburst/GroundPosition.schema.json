@@ -107,8 +107,17 @@
       }
     }
   },
-  {
-    "$ref": "../core/Localization.schema.json",
-    "description": "healpix_url" : "path to url",
-  }
+  [{
+      "$ref": "../core/AdditionalInfo.schema.json",
+      "description": "loc_algorthm = int",
+      },{
+      "$ref": "../core/Localization.schema.json",
+      "description": "healpix_url = path to url",
+      },{
+      "$ref": "../core/AdditionalInfo.schema.json",
+      "description": "loc_image_url = path to url",
+      },{
+    "$ref": "../core/AdditionalInfo.schema.json",
+    "description":  "comments = This Notice was ground-generated -- not flight-generated. ",
+  },]
 }

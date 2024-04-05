@@ -1,0 +1,37 @@
+{
+    "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/starburst/GroundPosition.schema.json",
+    "mission": "StarBurst",
+    "alert_datetime": "2024-03-19T18:19:13.097521",
+    "alert_type": "update",
+    "record_number": 2,
+    "id": "SB210812",
+    "classification": {
+        "GRB": 0.86,
+        "non-astrophysical": 0.14
+    },
+    "ra": 185.16666666666666,
+    "dec": 9.05,
+    "uncertainty": 23.316666666666666,
+    "trigger_signif": 57,
+    "trigger_interval": 4.096,
+    "trigger_time": "2021-08-12T00:16:28.734",
+    "e_range": "44.032 - 279.965 [keV]",
+    "detector_status": {
+        "CsI0": "on",
+        "CsI1": "on",
+        "CsI2": "on",
+        "CsI3": "on",
+        "CsI4": "on",
+        "CsI5": "on",
+        "CsI6": "on",
+        "CsI7": "on",
+        "CsI8": "off",
+        "CsI9": "triggered",
+        "CsI10": "on",
+        "CsI11": "on"
+    },
+    "loc_algorthm": 3,
+    "healpix_url": "http://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2021/SB210812/quicklook/SB210812_healpix.fits",
+    "loc_image_url": "http://gcn.gsfc.nasa.gov/notices_f/_loc_map_712243612.fits",
+    "comments": "This Notice was ground-generated -- not flight-generated."
+}

@@ -80,5 +80,12 @@
         }
       }
     }
-  }
+  },
+  [  {
+      "$ref": "../core/AdditionalInfo.schema.json",
+      "description": "lc_url =path to url",
+    },{
+      "$ref": "../core/AdditionalInfo.schema.json",
+    "description": "comments = Starburst Trigger Alert",
+    },]
 }

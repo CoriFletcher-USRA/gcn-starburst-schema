@@ -43,16 +43,16 @@
       "description": "uncertainty = int "
     },
     {
-      "$ref": "../core/DateTime.schema.json",
-      "description": "trigger_time": "YYYY-MM-DDTHH:MM:SS.xxx",
-    },
-    {
       "$ref": "../core/Event.schema.json",
       "description": "trigger_signif": " int [sigma]",
     },
     {
       "$ref": "../core/DateTime.schema.json",
       "description": "trigger_interval": " int [ms]",
+    },
+    {
+      "$ref": "../core/DateTime.schema.json",
+      "description": "trigger_time": "YYYY-MM-DDTHH:MM:SS.xxx",
     },
   ],
   "properties": {
@@ -94,21 +94,25 @@
         },
         "CsI11": {
           "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CLLB0": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "CLLB1": {
-          "$ref": "../core/DetectorStatus.schema.json"
-        },
-        "SSA": {
-          "$ref": "../core/DetectorStatus.schema.json"
+
         }
       }
     }
   },
-  {
+  [{
+    "$ref": "../core/AdditionalInfo.schema.json",
+    "description": "loc_algorthm = int",
+    },{
+    "$ref": "../core/AdditionalInfo.schema.json",
+    "description": "lc_url = path to url",
+    },{
     "$ref": "../core/Localization.schema.json",
-    "description": "healpix_url" : "path to url",
-  }
+    "description": "healpix_url = path to url",
+    },{
+    "$ref": "../core/AdditionalInfo.schema.json",
+    "description": "loc_url = path to url",
+    },{
+    "$ref": "../core/AdditionalInfo.schema.json",
+    "description":  "comments = This is likely a Long/Short GRB.",
+  },]
 }

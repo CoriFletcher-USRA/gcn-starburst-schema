@@ -1,7 +1,7 @@
 {
     "$schema": "https://gcn.nasa.gov/schema/gcn/notices/starburst/BurstAlert.schema.json",
     "mission": "StarBurst",
-    "alert_datetime": "2024-03-05T22:36:05.413118",
+    "alert_datetime": "2024-03-19T18:19:13.068394",
     "alert_type": "initial",
     "record_number": 1,
     "id": "SB210812",
